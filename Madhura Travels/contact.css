@@ -1,167 +1,175 @@
-*{
-    margin: 0;
-    padding: 0;
-    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+* {
+  margin: 0;
+  padding: 0;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 
-  }
+}
 
 
-  .navbar {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-        background: radial-gradient(circle, #0099cc, #0066cc, #004080); /* Centered Circular Gradient */
-    color: #fff;
-    padding: 5px 20px;
-    width: 100%;
-    box-sizing: border-box;
-    top: 0;
-    z-index: 3000;
-  }
-  
-  /* Logo Section */
-  .navbar__logo {
-    display: flex;
-    align-items: center;
-  }
-  
-  .navbar__logo img {
-    width: 50px;
-    height: 50px;
-    margin-right: 10px;
-  }
-  
-  .logo-text {
-    font-size: 1.5rem;
-    color: #fff;
-    text-decoration: none;
-    font-weight: bold;
-  }
-  
-  /* Buttons Section */
-  .navbar__buttons {
-    display: flex;
-    gap: 15px;
-  }
-  
-  .nav-btn {
-    padding: 10px 20px;
-    background: linear-gradient(90deg, #ff7e00, #ffa500); /* Orange Gradient */
-    color: #fff;
-    border: none;
-    border-radius: 25px;
-    font-size: 1rem;
-    font-weight: bold;
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    transition: background 0.3s ease, transform 0.2s ease;
-    cursor: pointer;
-  }
-  
-  .nav-btn:hover {
-    background: linear-gradient(90deg, #ff9500, #ffc107); /* Lighter Orange Gradient */
-    transform: scale(1.05); /* Slight zoom on hover */
-    box-shadow: 0px 6px 8px rgba(0, 0, 0, 0.2);
-  }
-  .nav-btn i {
-    font-size: 1.2rem;
-  }
-  
-  /* Main navigation bar */
-  .second_nav {
-    background: linear-gradient(45deg, #003366, #1d1e21);
-    padding: 10px 0;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
-  }
-  
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: radial-gradient(circle, #0099cc, #0066cc, #004080);
+  /* Centered Circular Gradient */
+  color: #fff;
+  padding: 5px 20px;
+  width: 100%;
+  box-sizing: border-box;
+  top: 0;
+  z-index: 3000;
+}
+
+/* Logo Section */
+.navbar__logo {
+  display: flex;
+  align-items: center;
+}
+
+.navbar__logo img {
+  width: 50px;
+  height: 50px;
+  margin-right: 10px;
+}
+
+.logo-text {
+  font-size: 1.5rem;
+  color: #fff;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+/* Buttons Section */
+.navbar__buttons {
+  display: flex;
+  gap: 15px;
+}
+
+.nav-btn {
+  padding: 10px 20px;
+  background: linear-gradient(90deg, #ff7e00, #ffa500);
+  /* Orange Gradient */
+  color: #fff;
+  border: none;
+  border-radius: 25px;
+  font-size: 1rem;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  transition: background 0.3s ease, transform 0.2s ease;
+  cursor: pointer;
+}
+
+.nav-btn:hover {
+  background: linear-gradient(90deg, #ff9500, #ffc107);
+  /* Lighter Orange Gradient */
+  transform: scale(1.05);
+  /* Slight zoom on hover */
+  box-shadow: 0px 6px 8px rgba(0, 0, 0, 0.2);
+}
+
+.nav-btn i {
+  font-size: 1.2rem;
+}
+
+/* Main navigation bar */
+.second_nav {
+  background: linear-gradient(45deg, #003366, #1d1e21);
+  padding: 10px 0;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+.navbar__links {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  margin: 0;
+  padding: 0;
+}
+
+.navbar__links li {
+  position: relative;
+  margin: 0 15px;
+}
+
+.navbar__links a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 1.2rem;
+  font-weight: bold;
+  padding: 8px 15px;
+  border-radius: 3px;
+  transition: background 0.3s ease;
+}
+
+.navbar__links a:hover {
+  background: linear-gradient(45deg, #005f99, #42a3f1);
+}
+
+/* Dropdown menu styling */
+.dropdown-menu {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  display: none;
+  background: linear-gradient(45deg, #87ceeb, #f0f8ff);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  border-radius: 4px;
+  padding: 0;
+  margin: 0;
+  min-width: 200px;
+  z-index: 1000;
+}
+
+.dropdown-menu li {
+  list-style: none;
+}
+
+.dropdown-menu a {
+  display: block;
+  padding: 10px 15px;
+  color: #005f99;
+  text-decoration: none;
+  font-size: 1rem;
+  border-bottom: 1px solid #ddd;
+  transition: background 0.3s ease;
+}
+
+.dropdown-menu a:hover {
+  background: linear-gradient(45deg, #42a3f1, #1e90ff);
+  color: #fff;
+}
+
+/* Remove the bottom border for the last item */
+.dropdown-menu li:last-child a {
+  border-bottom: none;
+}
+
+/* Show dropdown on hover */
+.dropdown:hover .dropdown-menu {
+  display: block;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
   .navbar__links {
-    list-style: none;
-    display: flex;
-    justify-content: center;
-    margin: 0;
-    padding: 0;
+    flex-direction: column;
+    align-items: center;
   }
-  
+
   .navbar__links li {
-    position: relative;
-    margin: 0 15px;
+    margin: 10px 0;
   }
-  
-  .navbar__links a {
-    color: #fff;
-    text-decoration: none;
-    font-size: 1.2rem;
-    font-weight: bold;
-    padding: 8px 15px;
-    border-radius: 3px;
-    transition: background 0.3s ease;
-  }
-  
-  .navbar__links a:hover {
-    background: linear-gradient(45deg, #005f99, #42a3f1);
-  }
-  
-  /* Dropdown menu styling */
+
   .dropdown-menu {
-    position: absolute;
-    top: 100%;
-    left: 0;
-    display: none;
-    background: linear-gradient(45deg, #87ceeb, #f0f8ff);
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    border-radius: 4px;
-    padding: 0;
-    margin: 0;
-    min-width: 200px;
-    z-index: 1000;
+    position: static;
+    box-shadow: none;
   }
-  
-  .dropdown-menu li {
-    list-style: none;
-  }
-  
-  .dropdown-menu a {
-    display: block;
-    padding: 10px 15px;
-    color: #005f99;
-    text-decoration: none;
-    font-size: 1rem;
-    border-bottom: 1px solid #ddd;
-    transition: background 0.3s ease;
-  }
-  
-  .dropdown-menu a:hover {
-    background: linear-gradient(45deg, #42a3f1, #1e90ff);
-    color: #fff;
-  }
-  
-  /* Remove the bottom border for the last item */
-  .dropdown-menu li:last-child a {
-    border-bottom: none;
-  }
-  
-  /* Show dropdown on hover */
-  .dropdown:hover .dropdown-menu {
-    display: block;
-  }
-  
-  /* Responsive adjustments */
-  @media (max-width: 768px) {
-    .navbar__links {
-        flex-direction: column;
-        align-items: center;
-    }
-  
-    .navbar__links li {
-        margin: 10px 0;
-    }
-  
-    .dropdown-menu {
-        position: static;
-        box-shadow: none;
-    }
-  }
+}
+
+
+
 
 .container {
   max-width: 1200px;
@@ -169,9 +177,9 @@
   padding: 20px;
 }
 
-.contact-page{
-    
-  background: url('https://img.freepik.com/free-photo/travel-concept-with-landmarks_23-2149153256.jpg?uid=R127955820&ga=GA1.1.371796311.1732772647&semt=ais_hybrid') no-repeat center center fixed;
+.contact-page {
+
+  background: url('https://assets-news.housing.com/news/wp-content/uploads/2022/07/21234906/Coimbatore1.jpg') no-repeat center center fixed;
   background-size: cover;
   animation: fadeIn 2s ease-in-out;
 }
@@ -186,10 +194,13 @@
 .col-md-8 {
   flex: 0 0 58%;
   max-width: 58%;
+  background-color: rgba(255, 255, 255, 0.518);
+  border-radius: 8px;
+
 }
 
 .contact-box {
-  background-color: rgba(255, 255, 255, 0.515);
+  background-color: rgba(255, 255, 255, 0.518);
   padding: 20px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   border-radius: 8px;
@@ -205,15 +216,15 @@
 }
 
 .contact-box h5 {
-    font-weight: 800;
+  font-weight: 800;
   font-size: 20px;
-  
+
   color: #007bff;
 }
 
 .contact-box p {
-margin-top: 0;
-margin-bottom: 1rem;
+  margin-top: 0;
+  margin-bottom: 1rem;
   font-size: 0.9rem;
   line-height: 1.6;
 }
@@ -227,10 +238,9 @@ margin-bottom: 1rem;
   text-decoration: underline;
 }
 
-form {
-  background-color: rgba(255, 255, 255, 0.475);
-  padding: 20px;
+.form {
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+
   border-radius: 8px;
 }
 
@@ -242,6 +252,7 @@ form {
   background-color: #007bff;
   border-color: #007bff;
   padding: 10px 20px;
+  margin: 10px;
 }
 
 .btn-primary i {
@@ -250,6 +261,7 @@ form {
 
 /* Responsive Design */
 @media (max-width: 768px) {
+
   .col-md-8,
   .contact-box-right {
     flex: 0 0 100%;
@@ -262,6 +274,13 @@ form {
     margin-top: 20px;
   }
 }
+
+
+
+
+
+
+
 
 .footer-section {
   background: #151414;
@@ -358,7 +377,7 @@ form {
   background: #ff5e14;
 }
 .footer-widget ul li {
-  display: inline-block;
+  /* display: inline-block; */
   /* float: left; */
   width: 50%;
   margin-bottom: 12px;
@@ -368,6 +387,7 @@ form {
 }
 .footer-widget ul li a {
   color: #878787;
+  text-decoration: none;
   text-transform: capitalize;
 }
 .subscribe-form {
@@ -527,3 +547,4 @@ form {
   background: #fff;
   color: #ff0000;
 }
+

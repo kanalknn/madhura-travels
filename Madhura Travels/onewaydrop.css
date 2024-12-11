@@ -1,4 +1,3 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&family=Roboto:wght@400;500&display=swap');
 
 
 
@@ -8,7 +7,7 @@
     align-items: center;
         background: radial-gradient(circle, #0099cc, #0066cc, #004080); /* Centered Circular Gradient */
     color: #fff;
-    padding: 5px 20px;
+    padding: 8px 16px;
     width: 100%;
     box-sizing: border-box;
     top: 0;
@@ -178,6 +177,9 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 
+
+
+
 /* Header Section */
 .header {
     background: url('https://www.coimbatoretour.com/wp-content/uploads/elementor/thumbs/best_package-qlwse7obp874f2dnpm2cvd4424jr242tne32qgc0hk.jpg') no-repeat center center;
@@ -199,6 +201,71 @@ h1, h2, h3, h4, h5, h6 {
     text-align: center;
     margin-bottom: 0;
     color: #333; /* Dark text color */
+}
+
+
+.local-rental {
+  background-color: #f9f9f9; /* Light background for separation */
+  padding: 20px; /* Padding for content spacing */
+  border: 1px solid #ddd; /* Subtle border */
+  border-radius: 10px; /* Rounded corners */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Soft shadow for depth */
+}
+
+.local-rental h2 {
+  font-size: 1.75rem; /* Larger heading size */
+  font-weight: bold; /* Bold text for emphasis */
+  color: #343a40; /* Neutral dark color */
+}
+
+.local-rental p {
+  font-size: 1rem; /* Standard text size */
+  color: #6c757d; /* Subtle text color */
+  margin-bottom: 10px; /* Spacing between paragraphs */
+}
+
+.local-rental ul {
+  padding-left: 20px; /* Indent the list */
+  margin-bottom: 15px; /* Space below the list */
+}
+
+.local-rental ul li {
+  font-size: 1rem; /* Standard text size */
+  color: #495057; /* Neutral text color */
+  margin-bottom: 5px; /* Spacing between list items */
+}
+
+.local-rental .btn {
+  font-size: 1rem; /* Button text size */
+  padding: 10px 15px; /* Padding inside buttons */
+  text-transform: uppercase; /* Capitalized button text */
+  border-radius: 5px; /* Rounded button corners */
+}
+
+.local-rental .btn-primary {
+  background-color: #007bff; /* Primary button color */
+  border: none; /* Remove border */
+  color: #fff; /* White text */
+  transition: all 0.3s ease; /* Smooth hover effect */
+}
+
+.local-rental .btn-primary:hover {
+  background-color: #0056b3; /* Darker hover color */
+}
+
+.local-rental .btn-success {
+  background-color: #28a745; /* Success button color */
+  border: none; /* Remove border */
+  color: #fff; /* White text */
+  transition: all 0.3s ease; /* Smooth hover effect */
+}
+
+.local-rental .btn-success:hover {
+  background-color: #1e7e34; /* Darker hover color */
+}
+
+.local-rental .d-flex a {
+  margin-right: 10px; /* Space between buttons */
 }
 
 /* Car Types Section */
@@ -439,7 +506,7 @@ h1, h2, h3, h4, h5, h6 {
     background: #ff5e14;
   }
   .footer-widget ul li {
-    display: inline-block;
+    /* display: inline-block; */
     /* float: left; */
     width: 50%;
     margin-bottom: 12px;
@@ -449,6 +516,7 @@ h1, h2, h3, h4, h5, h6 {
   }
   .footer-widget ul li a {
     color: #878787;
+    text-decoration: none;
     text-transform: capitalize;
   }
   .subscribe-form {
@@ -608,3 +676,73 @@ h1, h2, h3, h4, h5, h6 {
     background: #fff;
     color: #ff0000;
   }
+
+
+  .whatsapp-button {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 50px;
+    height: 50px;
+    background-color: #25d366; /* WhatsApp green color */
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+    z-index: 1000;
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    animation: pulse 1.5s infinite; /* Pulse animation */
+    opacity: 0; /* Initially hidden */
+    visibility: hidden; /* Hidden by default */
+}
+
+.whatsapp-button.visible {
+    opacity: 1; /* Visible when scrolled */
+    visibility: visible; /* Set visibility to visible */
+}
+
+.whatsapp-button:hover {
+    transform: scale(1.1);
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.4);
+}
+
+.whatsapp-button i {
+    color: white; /* Ensures the icon is white */
+    font-size: 25px; /* Adjust size of icon */
+}
+
+/* Pulse Animation */
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.2); /* Scale up */
+    }
+    100% {
+        transform: scale(1); /* Scale back to normal */
+    }
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .whatsapp-button {
+        width: 50px;
+        height: 50px;
+    }
+    .whatsapp-button i {
+        font-size: 24px; /* Smaller icon for smaller screens */
+    }
+}
+
+@media (max-width: 480px) {
+    .whatsapp-button {
+        width: 45px;
+        height: 45px;
+    }
+    .whatsapp-button i {
+        font-size: 20px; /* Further smaller icon for very small screens */
+    }
+}

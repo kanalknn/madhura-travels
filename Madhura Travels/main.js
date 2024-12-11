@@ -58,3 +58,7 @@ function showText(toggleText) {
   toggleText.classList.toggle("active");
 }
 
+
+
+// Add this script to your page to make the WhatsApp button visible after scrolling
+

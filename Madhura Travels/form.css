@@ -443,7 +443,7 @@ box-shadow: none;
     background: #ff5e14;
   }
   .footer-widget ul li {
-    display: inline-block;
+    /* display: inline-block; */
     /* float: left; */
     width: 50%;
     margin-bottom: 12px;
@@ -453,6 +453,7 @@ box-shadow: none;
   }
   .footer-widget ul li a {
     color: #878787;
+    text-decoration: none;
     text-transform: capitalize;
   }
   .subscribe-form {
@@ -612,3 +613,72 @@ box-shadow: none;
     background: #fff;
     color: #ff0000;
   }
+
+  .whatsapp-button {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 50px;
+    height: 50px;
+    background-color: #25d366; /* WhatsApp green color */
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+    z-index: 1000;
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    animation: pulse 1.5s infinite; /* Pulse animation */
+    opacity: 0; /* Initially hidden */
+    visibility: hidden; /* Hidden by default */
+}
+
+.whatsapp-button.visible {
+    opacity: 1; /* Visible when scrolled */
+    visibility: visible; /* Set visibility to visible */
+}
+
+.whatsapp-button:hover {
+    transform: scale(1.1);
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.4);
+}
+
+.whatsapp-button i {
+    color: white; /* Ensures the icon is white */
+    font-size: 25px; /* Adjust size of icon */
+}
+
+/* Pulse Animation */
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.2); /* Scale up */
+    }
+    100% {
+        transform: scale(1); /* Scale back to normal */
+    }
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .whatsapp-button {
+        width: 50px;
+        height: 50px;
+    }
+    .whatsapp-button i {
+        font-size: 24px; /* Smaller icon for smaller screens */
+    }
+}
+
+@media (max-width: 480px) {
+    .whatsapp-button {
+        width: 45px;
+        height: 45px;
+    }
+    .whatsapp-button i {
+        font-size: 20px; /* Further smaller icon for very small screens */
+    }
+}
