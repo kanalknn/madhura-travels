@@ -158,7 +158,73 @@
     }
   }
   
-
+  @media (max-width: 320px) {
+    html,body{
+      margin: 0;
+      padding: 0;
+      overflow-x: hidden;
+    }
+    /* Navbar adjustments */
+    .navbar {
+      flex-direction: column; /* Stack logo and buttons */
+      align-items: center;
+      padding: 10px 15px; /* Reduce padding for small screens */
+    }
+  
+    .navbar__logo img {
+      width: 40px; /* Smaller logo size */
+      height: 40px;
+    }
+  
+    .logo-text {
+      font-size: 1.2rem; /* Adjust logo text size */
+    }
+  
+    .navbar__buttons {
+      flex-direction: column; /* Stack buttons vertically */
+      gap: 10px; /* Smaller gap between buttons */
+      width: 50%; /* Make buttons span full width */
+      margin-top: 10px;
+    }
+  
+    .nav-btn {
+      padding: 8px 15px; /* Smaller button padding */
+      font-size: 0.9rem; /* Reduce font size */
+    }
+  
+    /* Adjust secondary navigation bar */
+    .second_nav {
+      padding: 5px 0; /* Reduce vertical padding */
+    }
+  
+    .navbar__links {
+      flex-direction: column; /* Stack links vertically */
+      align-items: center;
+    }
+  
+    .navbar__links li {
+      margin: 5px 0; /* Smaller margin between links */
+    }
+  
+    .navbar__links a {
+      font-size: 1rem; /* Adjust font size */
+      padding: 6px 10px; /* Reduce padding */
+    }
+  
+    /* Dropdown menu adjustments */
+    .dropdown-menu {
+      position: static; /* Remove absolute positioning */
+      box-shadow: none; /* Remove shadow */
+      width: 100%; /* Full width dropdown */
+      margin: 0;
+      padding: 0;
+    }
+  
+    .dropdown-menu a {
+      padding: 8px 10px; /* Adjust padding */
+      font-size: 0.9rem; /* Smaller font size */
+    }
+  }
   
 /* Global Reset */
 * {
