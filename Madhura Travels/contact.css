@@ -208,15 +208,24 @@ body, html {
   }
 
   .navbar__buttons {
-    flex-direction: column; /* Stack buttons vertically */
-    gap: 10px; /* Smaller gap between buttons */
-    width: 50%; /* Make buttons span full width */
-    margin-top: 10px;
+    display: flex;
+    flex-direction: row; /* Arrange buttons in a row */
+    justify-content: center; /* Center align buttons */
+    gap: 5px; /* Reduce gap between buttons */
+    width: 100%; /* Full width */
+    flex-wrap: wrap; /* Allow wrapping if needed */
   }
 
   .nav-btn {
-    padding: 8px 15px; /* Smaller button padding */
-    font-size: 0.9rem; /* Reduce font size */
+    flex: 1; /* Equal width for all buttons */
+    max-width: 90px; /* Set a max width to avoid too wide buttons */
+    padding: 0px; /* Adjust padding */
+    font-size: 13px; /* Reduce font size */
+    display: flex;
+    gap:5px;
+    align-items: center;
+    justify-content: center;
+    white-space: nowrap; /* Prevent text from wrapping */
   }
 
   /* Adjust secondary navigation bar */
