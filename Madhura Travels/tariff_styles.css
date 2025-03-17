@@ -155,96 +155,102 @@ display: block;
 
 /* Responsive adjustments */
 @media (max-width: 768px) {
-.navbar__links {
+  .navbar__links {
     flex-direction: column;
     align-items: center;
-}
+  }
 
-.navbar__links li {
+  .navbar__links li {
     margin: 10px 0;
-}
+  }
 
-.dropdown-menu {
+  .dropdown-menu {
     position: static;
     box-shadow: none;
-}
-}
+  }
 
-@media (max-width: 320px) {
-html,body{
+
+body, html {
   margin: 0;
   padding: 0;
-  overflow-x: hidden;
+  overflow-x: hidden; /* Prevent horizontal scrolling */
 }
-/* Navbar adjustments */
-.navbar {
-  flex-direction: column; /* Stack logo and buttons */
-  align-items: center;
-  padding: 10px 15px; /* Reduce padding for small screens */
 }
+@media screen and (min-width: 0px) and (max-width: 480px) {
+  html,body{
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+  }
+  /* Navbar adjustments */
+  .navbar {
+    flex-direction: column; /* Stack logo and buttons */
+    align-items: center;
+    padding: 10px 15px; /* Reduce padding for small screens */
+  }
 
-.navbar__logo img {
-  width: 40px; /* Smaller logo size */
-  height: 40px;
-}
+  .navbar__logo img {
+    width: 40px; /* Smaller logo size */
+    height: 40px;
+  }
 
-.logo-text {
-  font-size: 1.2rem; /* Adjust logo text size */
-}
+  .logo-text {
+    font-size: 1.2rem; /* Adjust logo text size */
+  }
 
-.navbar__buttons {
-  display: flex;
-  flex-direction: row; /* Arrange buttons in a row */
-  justify-content: center; /* Center align buttons */
-  gap: 5px; /* Reduce gap between buttons */
-  width: 100%; /* Full width */
-  flex-wrap: wrap; /* Allow wrapping if needed */
-}
+  .navbar__buttons {
+    display: flex;
+    flex-direction: row; /* Arrange buttons in a row */
+    justify-content: center; /* Center align buttons */
+    gap: 5px; /* Reduce gap between buttons */
+    width: 100%; /* Full width */
+    flex-wrap: wrap; /* Allow wrapping if needed */
+  }
 
-.nav-btn {
-  flex: 1; /* Equal width for all buttons */
-  max-width: 90px; /* Set a max width to avoid too wide buttons */
-  padding: 0px; /* Adjust padding */
-  font-size: 13px; /* Reduce font size */
-  display: flex;
-  gap:5px;
-  align-items: center;
-  justify-content: center;
-  white-space: nowrap; /* Prevent text from wrapping */
-}
+  .nav-btn {
+    flex: 1; /* Equal width for all buttons */
+    max-width: 90px; /* Set a max width to avoid too wide buttons */
+    padding: 0px; /* Adjust padding */
+    font-size: 13px; /* Reduce font size */
+    display: flex;
+    gap:5px;
+    align-items: center;
+    justify-content: center;
+    white-space: nowrap; /* Prevent text from wrapping */
+  }
 
-/* Adjust secondary navigation bar */
-.second_nav {
-  padding: 5px 0; /* Reduce vertical padding */
-}
+  /* Adjust secondary navigation bar */
+  .second_nav {
+    padding: 5px 0; /* Reduce vertical padding */
+  }
 
-.navbar__links {
-  flex-direction: column; /* Stack links vertically */
-  align-items: center;
-}
+  .navbar__links {
+    flex-direction: column; /* Stack links vertically */
+    align-items: center;
+  }
 
-.navbar__links li {
-  margin: 5px 0; /* Smaller margin between links */
-}
+  .navbar__links li {
+    margin: 5px 0; /* Smaller margin between links */
+  }
 
-.navbar__links a {
-  font-size: 1rem; /* Adjust font size */
-  padding: 6px 10px; /* Reduce padding */
-}
+  .navbar__links a {
+    font-size: 1rem; /* Adjust font size */
+    padding: 6px 10px; /* Reduce padding */
+  }
 
-/* Dropdown menu adjustments */
-.dropdown-menu {
-  position: static; /* Remove absolute positioning */
-  box-shadow: none; /* Remove shadow */
-  width: 100%; /* Full width dropdown */
-  margin: 0;
-  padding: 0;
-}
+  /* Dropdown menu adjustments */
+  .dropdown-menu {
+    position: static; /* Remove absolute positioning */
+    box-shadow: none; /* Remove shadow */
+    width: 100%; /* Full width dropdown */
+    margin: 0;
+    padding: 0;
+  }
 
-.dropdown-menu a {
-  padding: 8px 10px; /* Adjust padding */
-  font-size: 0.9rem; /* Smaller font size */
-}
+  .dropdown-menu a {
+    padding: 8px 10px; /* Adjust padding */
+    font-size: 0.9rem; /* Smaller font size */
+  }
 }
 
 .header {
