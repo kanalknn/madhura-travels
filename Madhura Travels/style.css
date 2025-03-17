@@ -899,6 +899,7 @@ h1{
   .btn12 {
       cursor: pointer;
       margin-top: 1.5rem;
+      list-style: none;
       padding: 0.75rem 1.5rem;
       font-size: 0.65rem;
       font-weight: bold;
@@ -910,6 +911,7 @@ h1{
  }
   .btn12:hover {
       background-color: #0d0d0d;
+      list-style: none;
  }
   .btn12:focus {
       outline: 1px dashed yellow;
