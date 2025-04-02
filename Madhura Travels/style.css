@@ -1,8 +1,18 @@
-@import url("https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
-@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&display=swap');
-@import url('https://fonts.googleapis.com/css?family=Cardo:400i|Rubik:400,700&display=swap');
-@import url('https://fonts.googleapis.com/css?family=Cardo:400i|Rubik:400,700&display=swap');
-@import url(https://fonts.googleapis.com/css?family=Raleway);
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+
+body {
+  font-family: 'Roboto', sans-serif; /* Body Text */
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Poppins', sans-serif; /* Headings */
+}
+
 .navbar {
   display: flex;
   justify-content: space-between;
@@ -34,7 +44,10 @@
   text-decoration: none;
   font-weight: bold;
 }
-
+.logo-text:hover{
+  text-decoration: none;
+  color: white;
+}
 /* Buttons Section */
 .navbar__buttons {
   display: flex;
@@ -97,6 +110,8 @@
 
 .navbar__links a:hover {
   background: linear-gradient(45deg, #005f99, #42a3f1);
+  text-decoration: none;
+  color: white;
 }
 
 /* Dropdown menu styling */
@@ -160,13 +175,89 @@
   }
 }
 
+@media screen and (min-width: 0px) and (max-width: 480px) {
+  html,body{
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+  }
+  /* Navbar adjustments */
+  .navbar {
+    flex-direction: column; /* Stack logo and buttons */
+    align-items: center;
+    padding: 10px 15px; /* Reduce padding for small screens */
+  }
+
+  .navbar__logo img {
+    width: 40px; /* Smaller logo size */
+    height: 40px;
+  }
+
+  .logo-text {
+    font-size: 1.2rem; /* Adjust logo text size */
+  }
+
+  .navbar__buttons {
+    display: flex;
+    flex-direction: row; /* Arrange buttons in a row */
+    justify-content: center; /* Center align buttons */
+    gap: 5px; /* Reduce gap between buttons */
+    width: 100%; /* Full width */
+    flex-wrap: wrap; /* Allow wrapping if needed */
+  }
+
+  .nav-btn {
+    flex: 1; /* Equal width for all buttons */
+    max-width: 90px; /* Set a max width to avoid too wide buttons */
+    padding: 0px; /* Adjust padding */
+    font-size: 13px; /* Reduce font size */
+    display: flex;
+    gap:5px;
+    align-items: center;
+    justify-content: center;
+    white-space: nowrap; /* Prevent text from wrapping */
+  }
+
+  /* Adjust secondary navigation bar */
+  .second_nav {
+    padding: 5px 0; /* Reduce vertical padding */
+  }
+
+  .navbar__links {
+    flex-direction: column; /* Stack links vertically */
+    align-items: center;
+  }
+
+  .navbar__links li {
+    margin: 5px 0; /* Smaller margin between links */
+  }
+
+  .navbar__links a {
+    font-size: 1rem; /* Adjust font size */
+    padding: 6px 10px; /* Reduce padding */
+  }
+
+  /* Dropdown menu adjustments */
+  .dropdown-menu {
+    position: static; /* Remove absolute positioning */
+    box-shadow: none; /* Remove shadow */
+    width: 100%; /* Full width dropdown */
+    margin: 0;
+    padding: 0;
+  }
+
+  .dropdown-menu a {
+    padding: 8px 10px; /* Adjust padding */
+    font-size: 0.9rem; /* Smaller font size */
+  }
+}
 
 
 .header {
   padding-block: 8rem 2rem;
   text-align: center;
   background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
-    url("assets/header_car.jpg");
+    url("./assets/temple.jpg");
   background-position: center center;
   background-size: cover;
   background-repeat: no-repeat;
@@ -267,12 +358,7 @@
   }
 }
 
- *{
-  margin: 0;
-  padding: 0;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
-}
+
 
 h1{
   font-size: 2.5rem;
@@ -496,9 +582,7 @@ h1{
     100% { opaicty:1; }
   }
   
-  body {
-    margin:0;
-  }
+ 
   
   .category-name {
     font-family: sans-serif;
@@ -582,7 +666,7 @@ h1{
                     .basic-card-light .card-link a:after {
                         background:#636363;
                     }
-
+                  
 /* arrow */
 /* arrrow.css */
 #backToTop {
@@ -636,8 +720,8 @@ h1{
     position: fixed;
     bottom: 20px;
     right: 20px;
-    width: 60px;
-    height: 60px;
+    width: 50px;
+    height: 50px;
     background-color: #25d366; /* WhatsApp green color */
     border-radius: 50%;
     display: flex;
@@ -647,6 +731,14 @@ h1{
     z-index: 1000;
     cursor: pointer;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
+    animation: pulse 1.5s infinite; /* Pulse animation */
+    opacity: 0; /* Initially hidden */
+    visibility: hidden; /* Hidden by default */
+}
+
+.whatsapp-button.visible {
+    opacity: 1; /* Visible when scrolled */
+    visibility: visible; /* Set visibility to visible */
 }
 
 .whatsapp-button:hover {
@@ -654,9 +746,43 @@ h1{
     box-shadow: 0 6px 10px rgba(0, 0, 0, 0.4);
 }
 
-.whatsapp-button img {
-    width: 40px;
-    height: 40px;
+.whatsapp-button i {
+    color: white; /* Ensures the icon is white */
+    font-size: 25px; /* Adjust size of icon */
+}
+
+/* Pulse Animation */
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.2); /* Scale up */
+    }
+    100% {
+        transform: scale(1); /* Scale back to normal */
+    }
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .whatsapp-button {
+        width: 50px;
+        height: 50px;
+    }
+    .whatsapp-button i {
+        font-size: 24px; /* Smaller icon for smaller screens */
+    }
+}
+
+@media (max-width: 480px) {
+    .whatsapp-button {
+        width: 45px;
+        height: 45px;
+    }
+    .whatsapp-button i {
+        font-size: 20px; /* Further smaller icon for very small screens */
+    }
 }
 
 
@@ -666,9 +792,7 @@ h1{
       --font-sans: 'Rubik', sans-serif;
       --font-serif: 'Cardo', serif;
  }
-  * {
-      box-sizing: border-box;
- }
+ 
   /* html, body {
       height: 100%;
  }
@@ -775,6 +899,7 @@ h1{
   .btn12 {
       cursor: pointer;
       margin-top: 1.5rem;
+      list-style: none;
       padding: 0.75rem 1.5rem;
       font-size: 0.65rem;
       font-weight: bold;
@@ -786,6 +911,7 @@ h1{
  }
   .btn12:hover {
       background-color: #0d0d0d;
+      list-style: none;
  }
   .btn12:focus {
       outline: 1px dashed yellow;
@@ -836,11 +962,14 @@ h2 {
   color: #0a4870;
   font-weight: 500;
 }
-ul {
+.booking-ul {
   display: flex;
   flex-wrap: wrap;
   list-style: none;
-  padding: 0px;
+  justify-content: center; /* Center items horizontally */
+  margin: 0;                /* Remove default margin */
+  padding: 0;               /* Remove default padding */
+  width: 100%;              /* Ensure it takes full width of its container */
 }
 ul .booking-card {
   position: relative;
@@ -977,21 +1106,32 @@ ul .booking-card:hover .informations-container {
 ul .booking-card:hover .informations-container .more-information {
   opacity: 1;
 }
-@media (max-width: 768px) {
-  ul .booking-card::before {
-      background: rgba(10, 72, 112, 0.6);
- }
-  ul .booking-card .book-container .content11 {
-      opacity: 1;
-      transform: translateY(0px);
- }
+@media screen and (max-width: 768px) {
+  ul .booking-card {
+    width: 250px; /* Decrease width for tablets and small devices */
+    flex: 0 0 250px;
+    margin: 15px;
+  }
+
+  ul .booking-card .book-container {
+    height: 150px; /* Adjust height of the book-container */
+  }
+
   ul .booking-card .informations-container {
-      transform: translateY(0px);
- }
-  ul .booking-card .informations-container .more-information {
-      opacity: 1;
- }
+    padding: 15px; /* Reduce padding for smaller screens */
+  }
+
+  ul .booking-card .informations-container .title {
+    font-size: 1em; /* Adjust font size */
+  }
+
+  ul .booking-card .informations-container .price .icon {
+    font-size: 1em; /* Adjust icon size */
+  }
 }
+
+/* Mobile-first adjustments for smaller screens */
+
 .credits {
   display: table;
   background: #0a4870;
@@ -1108,7 +1248,7 @@ h1 {
     background: #ff5e14;
   }
   .footer-widget ul li {
-    display: inline-block;
+    /* display: inline-block; */
     /* float: left; */
     width: 50%;
     margin-bottom: 12px;
@@ -1118,6 +1258,7 @@ h1 {
   }
   .footer-widget ul li a {
     color: #878787;
+      text-decoration: none;
     text-transform: capitalize;
   }
   .subscribe-form {
@@ -1277,4 +1418,5 @@ h1 {
     background: #fff;
     color: #ff0000;
   }
+  
   

@@ -332,21 +332,100 @@ display: block;
 }
 
 /* Responsive adjustments */
+/* For screens 768px and below */
 @media (max-width: 768px) {
-.navbar__links {
-flex-direction: column;
-align-items: center;
+  .navbar__links {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .navbar__links li {
+    margin: 10px 0;
+  }
+
+  .dropdown-menu {
+    position: static;
+    box-shadow: none;
+  }
 }
 
-.navbar__links li {
-margin: 10px 0;
+@media (max-width: 320px) {
+  html,body{
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+  }
+  /* Navbar adjustments */
+  .navbar {
+    flex-direction: column; /* Stack logo and buttons */
+    align-items: center;
+    padding: 10px 15px; /* Reduce padding for small screens */
+  }
+
+  .navbar__logo img {
+    width: 40px; /* Smaller logo size */
+    height: 40px;
+  }
+
+  .logo-text {
+    font-size: 1.2rem; /* Adjust logo text size */
+  }
+
+  .navbar__buttons {
+    display: flex;
+    flex-direction: row; /* Arrange buttons in a row */
+    justify-content: center; /* Center align buttons */
+    gap: 5px; /* Reduce gap between buttons */
+    width: 100%; /* Full width */
+    flex-wrap: wrap; /* Allow wrapping if needed */
+  }
+
+  .nav-btn {
+    flex: 1; /* Equal width for all buttons */
+    max-width: 90px; /* Set a max width to avoid too wide buttons */
+    padding: 0px; /* Adjust padding */
+    font-size: 13px; /* Reduce font size */
+    display: flex;
+    gap:5px;
+    align-items: center;
+    justify-content: center;
+    white-space: nowrap; /* Prevent text from wrapping */
+  }
+
+  /* Adjust secondary navigation bar */
+  .second_nav {
+    padding: 5px 0; /* Reduce vertical padding */
+  }
+
+  .navbar__links {
+    flex-direction: column; /* Stack links vertically */
+    align-items: center;
+  }
+
+  .navbar__links li {
+    margin: 5px 0; /* Smaller margin between links */
+  }
+
+  .navbar__links a {
+    font-size: 1rem; /* Adjust font size */
+    padding: 6px 10px; /* Reduce padding */
+  }
+
+  /* Dropdown menu adjustments */
+  .dropdown-menu {
+    position: static; /* Remove absolute positioning */
+    box-shadow: none; /* Remove shadow */
+    width: 100%; /* Full width dropdown */
+    margin: 0;
+    padding: 0;
+  }
+
+  .dropdown-menu a {
+    padding: 8px 10px; /* Adjust padding */
+    font-size: 0.9rem; /* Smaller font size */
+  }
 }
 
-.dropdown-menu {
-position: static;
-box-shadow: none;
-}
-}
 
 .footer-section {
     background: #151414;
@@ -443,7 +522,7 @@ box-shadow: none;
     background: #ff5e14;
   }
   .footer-widget ul li {
-    display: inline-block;
+    /* display: inline-block; */
     /* float: left; */
     width: 50%;
     margin-bottom: 12px;
@@ -453,6 +532,7 @@ box-shadow: none;
   }
   .footer-widget ul li a {
     color: #878787;
+    text-decoration: none;
     text-transform: capitalize;
   }
   .subscribe-form {
@@ -612,3 +692,72 @@ box-shadow: none;
     background: #fff;
     color: #ff0000;
   }
+
+  .whatsapp-button {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 50px;
+    height: 50px;
+    background-color: #25d366; /* WhatsApp green color */
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+    z-index: 1000;
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    animation: pulse 1.5s infinite; /* Pulse animation */
+    opacity: 0; /* Initially hidden */
+    visibility: hidden; /* Hidden by default */
+}
+
+.whatsapp-button.visible {
+    opacity: 1; /* Visible when scrolled */
+    visibility: visible; /* Set visibility to visible */
+}
+
+.whatsapp-button:hover {
+    transform: scale(1.1);
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.4);
+}
+
+.whatsapp-button i {
+    color: white; /* Ensures the icon is white */
+    font-size: 25px; /* Adjust size of icon */
+}
+
+/* Pulse Animation */
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.2); /* Scale up */
+    }
+    100% {
+        transform: scale(1); /* Scale back to normal */
+    }
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .whatsapp-button {
+        width: 50px;
+        height: 50px;
+    }
+    .whatsapp-button i {
+        font-size: 24px; /* Smaller icon for smaller screens */
+    }
+}
+
+@media (max-width: 480px) {
+    .whatsapp-button {
+        width: 45px;
+        height: 45px;
+    }
+    .whatsapp-button i {
+        font-size: 20px; /* Further smaller icon for very small screens */
+    }
+}

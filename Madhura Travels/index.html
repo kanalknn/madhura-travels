@@ -11,18 +11,15 @@
       href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     
-    <link rel="stylesheet" href="style.css" />
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Cardo:400i|Rubik:400,700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
+     <link rel="stylesheet" href="style.css" />
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css" 
     integrity="sha512-5Hs3dF2AEPkpNAR7UiOHba+lRSJNeM2ECkwxUIxC1Q/FLycGTbNapWXB4tP889k5T5Ju8fs4b1P5z/iB4nMfSQ==" crossorigin="anonymous" 
     referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" 
     integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+
+
 
     <title>Sri Madhura Travels</title>
   </head>
@@ -37,7 +34,7 @@
         <button class="nav-btn" onclick="location.href='tel:+91 0000000000'">
           <i class="ri-phone-line"></i> Call Us
         </button>
-        <button class="nav-btn">
+        <button class="nav-btn" onclick="location.href='./contact.html'">
           <i class="ri-question-line"></i> Enquire
         </button>
           <button class="nav-btn">
@@ -48,26 +45,27 @@
   </div>
 <div class="second_nav">
       <ul id="nav-links" class="navbar__links">
-          <li><a href="#home">Home</a></li>
+          <li><a href="index.html">Home</a></li>
           <li><a href="#services">Services</a></li>
           <li class="dropdown">
-            <a href="#">Tariff &#9662;</a>
+            <a href="javascript:void(0);">Tariff &#9662;</a>
             <ul class="dropdown-menu">
-                <li><a href="/tariffs/tariff.html">Local Traiff</a></li>
-                <li><a href="/tariffs/tariff.html">Out Station Round Trip</a></li>
-                <li><a href="/onewaydrop.html">One Way Drop</a></li>
+              <li><a href="./tariff.html">Local Tariff</a></li>
+              <li><a href="./outstation.html">Out Station Round Trip</a></li>
+              <li><a href="./onewaydrop.html">One Way Drop</a></li>
             </ul>
-        </li>
+          </li>
+          
           <li class="dropdown">
-              <a href="#packages">Tour Packages &#9662;</a>
+              <a href="javascript:void(0);">Tour Packages &#9662;</a>
               <ul class="dropdown-menu">
-                  <li><a href="packages.html">One Day Packages</a></li>
-                  <li><a href="packages.html">Weekend Packages</a></li>
-                  <li><a href="packages.css">Upto Seven Days</a></li>
+                  <li><a href="./packages.html">One Day Packages</a></li>
+                  <li><a href="./packages.html">Weekend Packages</a></li>
+                  <li><a href="./packages.html">Upto Seven Days</a></li>
               </ul>
           </li>
           <li><a href="#footers">About Us</a></li>
-          <li><a href="#contact">Contact</a></li>
+          <li><a href="./contact.html">Contact</a></li>
       </ul>
   </div>
   
@@ -99,15 +97,19 @@
           </form>
         </div>
       </header>
-    </div>   
+    
+    
+    
+
+
     <div class="service" id="services">
   <h1> <b>Sri Madhura Tours & Travels </b></h1>
   <center>  <h4>Your Gateway to Memorable Journeys and Unforgettable Experiences  </h4>
   </center>
-  <div class="cols">
-			<div class="col" ontouchstart="this.classList.toggle('hover');">
+  <div class="cols " data-aos="fade-up" data-aos-delay="100">
+			<div class="col-lg-3 col-md-6 mb-4" data-aos="fade-up" data-aos-delay="100" ontouchstart="this.classList.toggle('hover');">
 				<div class="container">
-					<div class="front" style="background-image: url(https://unsplash.it/500/500/)">
+					<div class="front" style="background-image: url(./assets/private.jpg)">
 						<div class="inner">
 							<p>PRIVATE VEHICLE</p>
               <!-- <span>Lorem ipsum</span> -->
@@ -120,9 +122,9 @@
 					</div>
 				</div>
 			</div>
-			<div class="col" ontouchstart="this.classList.toggle('hover');">
+			<div class="col-lg-3 col-md-6 mb-4" data-aos="fade-up" data-aos-delay="100" ontouchstart="this.classList.toggle('hover');">
 				<div class="container">
-					<div class="front" style="background-image: url(https://unsplash.it/505/505/)">
+					<div class="front" style="background-image: url(./assets/best\ price.png)">
 						<div class="inner">
 							<p>BEST PRICE</p>
               <!-- <span>Lorem ipsum</span> -->
@@ -135,9 +137,9 @@
 					</div>
 				</div>
 			</div>
-			<div class="col" ontouchstart="this.classList.toggle('hover');">
+			<div class="col-lg-3 col-md-6 mb-4" data-aos="fade-up" data-aos-delay="100" ontouchstart="this.classList.toggle('hover');">
 				<div class="container">
-					<div class="front" style="background-image: url(https://unsplash.it/506/506/)">
+					<div class="front" style="background-image: url(./assets/fastbooking.avif)">
 						<div class="inner">
 							<p>FAST BOOKING</p>
               <!-- <span>Lorem ipsum</span> -->
@@ -150,9 +152,9 @@
 					</div>
 				</div>
 			</div>
-			<div class="col" ontouchstart="this.classList.toggle('hover');">
+			<div class="col-lg-3 col-md-6 mb-4" data-aos="fade-up" data-aos-delay="100" ontouchstart="this.classList.toggle('hover');">
 				<div class="container">
-					<div class="front" style="background-image: url(https://unsplash.it/508/508/)">
+					<div class="front" style="background-image: url(./assets/stay\ safe.jpg)">
 						<div class="inner">
 							<p>STAY SAFE</p>
               <!-- <span>Lorem ipsum</span> -->
@@ -166,7 +168,7 @@
 				</div>
 			</div>
 		</div>
- </div><br>
+ </div>
 
  <center><h1><b>Our Destinations</b></h1>
 <h4>Explore the most iconic destinations with our curated travel experiences.
@@ -177,22 +179,22 @@
       <div class="card" id="Destinations">
           <div class="content12">
               <h2 class="title">Mountain View</h2>
-              <p class="copy">Check out all of these gorgeous mountain trips with beautiful views of, you guessed it, the mountains</p><button class="btn12">View Trips</button></div>
+              <p class="copy">Check out all of these gorgeous mountain trips with beautiful views of, you guessed it, the mountains</p><button class="btn12"><a href="packages.html" style="color:white;">View Trips</a></button></div>
       </div>
       <div class="card">
           <div class="content12">
               <h2 class="title">To The Beach</h2>
-              <p class="copy">Plan your next beach trip with these fabulous destinations</p><button class="btn12">View Trips</button></div>
+              <p class="copy">Plan your next beach trip with these fabulous destinations</p><button class="btn12"><a href="packages.html" style="color:white;">View Trips</a></button></div>
       </div>
       <div class="card">
           <div class="content12">
               <h2 class="title">Desert Destinations</h2>
-              <p class="copy">It's the desert you've always dreamed of</p><button class="btn12">View Trips</button></div>
+              <p class="copy">It's the desert you've always dreamed of</p><button class="btn12"><a href="packages.html" style="color:white;">View Trips</a></button></div>
       </div>
       <div class="card">
           <div class="content12">
               <h2 class="title">Trendy Temples</h2>
-              <p class="copy">Seriously, straight up, just blast off into outer space today</p><button class="btn12">View Trips</button></div>
+              <p class="copy">Seriously, straight up, just blast off into outer space today</p><button class="btn12"><a href="packages.html" style="color:white;">View Trips</a></button></div>
       </div>
   </main><br>
           
@@ -200,7 +202,7 @@
       <h1><b>Our Best Selling Holiday packages</b></h1>
      <center> <h4>Checkout our tours frequently travelled
      </h4></center>
-      <ul>
+      <ul class="booking-ul">
   
         <li class="booking-card" style="background-image: url(https://images.unsplash.com/photo-1578944032637-f09897c5233d?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=400&fit=max&ixid=eyJhcHBfaWQiOjE0NTg5fQ)">
   
@@ -473,9 +475,7 @@
                   The team made sure we were comfortable throughout the journey and Booking a space tour felt surreal! The professionalism and planning exceeded my expectations.                </p>
             </div>
 
-            <div class="card-link">
-                <a href="#" title="Read Full"><span>Read Full</span></a>
-            </div>
+            
         </div>
         <div class="basic-card basic-card-light">
           <div class="card-content">
@@ -485,9 +485,7 @@
                 The team made sure we were comfortable throughout the journey and Booking a space tour felt surreal! The professionalism and planning exceeded my expectations.                </p>
           </div>
 
-          <div class="card-link">
-              <a href="#" title="Read Full"><span>Read Full</span></a>
-          </div>
+          
       </div>
       <div class="basic-card basic-card-light">
         <div class="card-content">
@@ -497,9 +495,7 @@
               The team made sure we were comfortable throughout the journey and Booking a space tour felt surreal! The professionalism and planning exceeded my expectations.                </p>
         </div>
 
-        <div class="card-link">
-            <a href="#" title="Read Full"><span>Read Full</span></a>
-        </div>
+        
     </div>
     <div class="basic-card basic-card-light">
       <div class="card-content">
@@ -509,9 +505,7 @@
             The team made sure we were comfortable throughout the journey and Booking a space tour felt surreal! The professionalism and planning exceeded my expectations.                </p>
       </div>
 
-      <div class="card-link">
-          <a href="#" title="Read Full"><span>Read Full</span></a>
-      </div>
+       
   </div>
   </div><br>
 </div>
@@ -529,7 +523,6 @@
       </div>
     </section> -->
   
-
     <footer class="footer-section" id="footers">
       <div class="container">
           <div class="footer-cta pt-5 ">
@@ -539,7 +532,7 @@
                           <i class="fas fa-map-marker-alt"></i>
                           <div class="cta-text">
                               <h4>Find us</h4>
-                              <span>New Hotel Street, Jolarpet, Tirupattur-635851 </span>
+                              <span>No 17, Nagappa Thevar Street, Ramanathapuram Coimbatore, Coimbatore - 641045 (Near NM Hospital) </span>
                           </div>
                       </div>
                   </div>
@@ -548,7 +541,7 @@
                           <i class="fas fa-phone"></i>
                           <div class="cta-text">
                               <h4>Call us</h4>
-                              <span>+91 1234567890</span>
+                              <span>+91 7947425823</span>
                           </div>
                       </div>
                   </div>
@@ -589,16 +582,13 @@
                           <div class="footer-widget-heading">
                               <h3>Useful Links</h3>
                           </div>
-                          <ul>
-                              <li><a href="#">Our Team</a></li>
+                          <ul class="list-unstyled">
                               <li><a href="#">About Us</a></li>
                               <!-- <li><a href="#">Our Gallery</a></li> -->
                               <!-- <li><a href="#">Selection Process</a></li> -->
-                              <li><a href="#">FAQ</a></li>
-                              <li><a href="#">Discounts</a></li>
-                              <li><a href="#">Our Policies</a></li>
-                              <li><a href="#">Our Team</a></li>
-                              <li><a href="#">Contact us</a></li>
+                              <li><a href="./packages.html">Packages</a></li>
+                              <li><a href="./tariff.html">Tariff</a></li>
+                              <li><a href="./contact.html">Contact us</a></li>
                           </ul>
                       </div>
                   </div>
@@ -610,7 +600,7 @@
                           <div class="footer-text mb-25">
                               <p>Don’t miss to subscribe to our new feeds, kindly fill the form below.</p>
                           </div>
-                          <div class="subscribe-form">
+                          <div class="subscribe-form form2">
                               <form action="#">
                                   <input type="text" placeholder="Email Address">
                                   <button><i class="fab fa-telegram-plane"></i></button>
@@ -626,7 +616,7 @@
               <div class="row">
                   <div class="col-xl-6 col-lg-6 text-center text-lg-left">
                       <div class="copyright-text">
-                          <p>Copyright &copy; 2024, All Right Reserved <a href="#">Madhura Travela</a></p>
+                          <p>Copyright &copy; 2024, All Right Reserved <a href="#">Sri Madhura Travels</a></p>
                       </div>
                   </div>
                   <div class="col-xl-6 col-lg-6 d-none d-lg-block text-right">
@@ -652,9 +642,11 @@
 
   <div class="whatsapp-button">
     <a href="https://wa.me/your-phone-number" target="_blank" title="Chat with us on WhatsApp">
-        <img src="whatsapp-icon.png" alt="WhatsApp" />
+      <i class="fa-brands fa-whatsapp"></i>
     </a>
 </div>
+
+
 
     <script src="https://unpkg.com/scrollreveal"></script>
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
@@ -687,7 +679,16 @@
           window.location.href = 'product.html';
         });
         </script> -->
-
+<script>
+  window.onscroll = function() {
+  var whatsappButton = document.querySelector('.whatsapp-button');
+  if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
+      whatsappButton.classList.add('visible');
+  } else {
+      whatsappButton.classList.remove('visible');
+  }
+};
+</script>
 
   </body>
 </html>
