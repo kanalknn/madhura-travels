@@ -10,7 +10,7 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color: #566279;
+  background-color: #0118D8;
   padding: 8px 40px;
 }
 
@@ -155,7 +155,7 @@ text-fill-color: transparent;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: #566279;
+    background-color: #0118D8;
     padding: 7px 7px;
     padding-left: 5px;
   }
@@ -264,7 +264,7 @@ min-width: 150px; /* Ensure inputs have a reasonable width */
 
 .input__group span {
 font-size: 1.25rem;
-color: #5cb85c;
+color: #0118D8;
 }
 
 .input__group input {
@@ -280,7 +280,7 @@ color: #999;
 }
 
 .search__btn .btn {
-background-color: #5cb85c;
+background-color: #0118D8;
 color: #fff;
 font-size: 1rem;
 padding: 0.6rem 1.2rem;
@@ -292,7 +292,7 @@ white-space: nowrap; /* Prevent button text from wrapping */
 }
 
 .search__btn .btn:hover {
-background-color: #4cae4c;
+background-color: #1B56FD;
 }
 
 /* Responsive Design */
