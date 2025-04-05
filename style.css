@@ -10,7 +10,7 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color: #666bf1;
+  background-color:#0118D8;
   padding: 8px 40px;
 }
 
@@ -82,7 +82,7 @@ background-clip: text;
 }
 
 .nav-menu > li > a:hover {
-  background-color: #666bf1;
+  background-color: #0118D8;
   color: rgb(220, 220, 211);
 
 }
@@ -154,7 +154,7 @@ background-clip: text;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: #566279;
+    background-color: #0118D8;
     padding: 7px 7px;
     padding-left: 5px;
   }
@@ -214,7 +214,7 @@ background-clip: text;
   padding-block: 8rem 2rem;
   text-align: center;
   background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
-    url("./assets/temple.jpg");
+    url("assets/herobg2.jpg");
   background-position: center center;
   background-size: cover;
   background-repeat: no-repeat;
@@ -268,7 +268,7 @@ background-clip: text;
 
 .input__group span {
   font-size: 1.25rem;
-  color: #666bf1;
+  color: #0118D8;
 }
 
 .input__group input {
@@ -284,7 +284,7 @@ background-clip: text;
 }
 
 .search__btn .btn {
-  background-color: #666bf1;
+  background-color: #0118D8;
   color: #fff;
   font-size: 1rem;
   padding: 0.6rem 1.2rem;
@@ -296,7 +296,7 @@ background-clip: text;
 }
 
 .search__btn .btn:hover {
-  background-color: #4cae4c;
+  background-color: #1B56FD;
 }
 
 /* Responsive Design */
@@ -758,7 +758,7 @@ h1{
 
  .subhd {
   font-size: 1.3rem;
-  color: #666bf1;
+  color: #0118D8;
   line-height: 1.2;
   padding: 8px 0px;
   font-weight: bold;
@@ -767,6 +767,7 @@ h1{
       position: relative;
       display: flex;
       align-items: flex-end;
+      border-radius: 15px !important;
       overflow: hidden;
       padding: 1rem;
       width: 100%;
@@ -806,16 +807,28 @@ h1{
       transition: transform calc(var(--d) * 2) var(--e);
  }
   .card:nth-child(1):before {
-      background-image: url(https://images.unsplash.com/photo-1517021897933-0e0319cfbc28?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=400&fit=max&ixid=eyJhcHBfaWQiOjE0NTg5fQ);
+      background-image: url('assets/shan-elahi.jpg');
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
  }
   .card:nth-child(2):before {
-      background-image: url(https://images.unsplash.com/photo-1533903345306-15d1c30952de?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=400&fit=max&ixid=eyJhcHBfaWQiOjE0NTg5fQ);
+      background-image: url('assets/indiagate.jpg');
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
  }
   .card:nth-child(3):before {
-      background-image: url(https://images.unsplash.com/photo-1545243424-0ce743321e11?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=400&fit=max&ixid=eyJhcHBfaWQiOjE0NTg5fQ);
+      background-image: url('assets/muppaneni-LM.jpg');
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
  }
   .card:nth-child(4):before {
-      background-image: url(https://images.unsplash.com/photo-1531306728370-e2ebd9d7bb99?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=400&fit=max&ixid=eyJhcHBfaWQiOjE0NTg5fQ);
+      background-image: url('assets/temples.jpg');
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
  }
   .content12 {
       position: relative;
@@ -853,11 +866,12 @@ h1{
       letter-spacing: 0.025rem;
       text-transform: uppercase;
       color: white;
-      background-color: black;
+      border-radius: 10px;
+      background-color: #0118D8;
       border: none;
  }
   .btn12:hover {
-      background-color: #0d0d0d;
+      background-color: #1B56FD;
       list-style: none;
  }
   .btn12:focus {
@@ -1005,12 +1019,12 @@ h1{
   letter-spacing: 0.025rem;
   text-transform: uppercase;
   color: white;
-  background-color: rgb(42, 42, 160);
+  background-color:#0118D8;
   border: none;
   border-radius: 10px;
 }
 .btn_car:hover {
-  background-color: #0d0d0d;
+  background-color: #1B56FD;
   list-style: none;
 }
 .btn_car:focus {
